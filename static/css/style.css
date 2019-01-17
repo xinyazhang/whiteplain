@@ -553,7 +553,12 @@ blockquote blockquote blockquote blockquote {
   fill: currentColor;
 }
 
+/*
 .404 h1 {
+  text-align: center;
+}
+*/
+.article h1 {
   text-align: center;
 }
 
