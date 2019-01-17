@@ -1,6 +1,6 @@
 # Whiteplain
 
-[![CircleCI](https://circleci.com/gh/taikii/whiteplain.svg?style=svg)](https://circleci.com/gh/taikii/whiteplain)
+[![CircleCI](https://circleci.com/gh/taikii/whiteplain.svg?style=shield)](https://circleci.com/gh/taikii/whiteplain)
 
 This is simple and functional [Hugo](https://gohugo.io/) theme.
 
@@ -34,6 +34,10 @@ googleAnalytics = "Toracking ID"
 copyright = "&copy; Copyright 2017 Your name"
 
 [params]
+  # whether to use CDN or local file for fontawesome
+  #useCDN = false
+  # whether to include external sharing scripts and icons for twitter, facebook and co.
+  #showShareIcons = false
   # Date format
   #dateFormat = "January 2, 2006"
 
@@ -145,32 +149,40 @@ Your site direcctory
         └── custom.js
 ```
 
-### Customize Share Buttons
-1. Copy `themes/whiteplain/layout/partials/share.html` to `layout/partcials/share.html`.
-2. Customize `layout/partcials/share.html`.
+If you want to use libraries and frameworks, create `layouts/partials/head_custom.html`. Its contents are read into `<head>...</head>`.
 ```
 Your site direcctory
-├── layout
+├── layouts
+     └── partials
+         └── head_custom.html
+```
+
+### Customize Share Buttons
+1. Copy `themes/whiteplain/layouts/partials/share.html` to `layouts/partials/share.html`.
+2. Customize `layouts/partials/share.html`.
+```
+Your site direcctory
+├── layouts
 │   └── partials
 │       └── share.html
 └── themes
     └── whiteplain
-        └── layout
+        └── layouts
             └── partials
                 └── share.html
 ```
 
 ### Customize Author SNS Icons
-1. Copy `themes/whiteplain/layout/partials/social.html` to `layout/partcials/sorcial.html`.
-2. Customize `layout/partcials/social.html`.
+1. Copy `themes/whiteplain/layouts/partials/social.html` to `layouts/partials/social.html`.
+2. Customize `layouts/partials/social.html`.
 ```
 Your site direcctory
-├── layout
+├── layouts
 │   └── partials
 │       └── social.html
 └── themes
     └── whiteplain
-        └── layout
+        └── layouts
             └── partials
                 └── social.html
 ```
